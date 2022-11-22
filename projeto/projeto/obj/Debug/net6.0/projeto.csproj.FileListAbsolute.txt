@@ -1,0 +1,15 @@
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\bin\Debug\net6.0\projeto.exe
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\bin\Debug\net6.0\projeto.deps.json
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\bin\Debug\net6.0\projeto.runtimeconfig.json
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\bin\Debug\net6.0\projeto.dll
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\bin\Debug\net6.0\projeto.pdb
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\projeto.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\projeto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\projeto.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\projeto.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\projeto.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\projeto.dll
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\refint\projeto.dll
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\projeto.pdb
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\projeto.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\rascunho\projeto\projeto\obj\Debug\net6.0\ref\projeto.dll
