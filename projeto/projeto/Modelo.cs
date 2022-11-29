@@ -33,20 +33,21 @@ namespace projeto
 
         #region Propriedades
 
-        // Como se faz para enum?
-        //public Tipo Descricao
-        //{
-        //    get { return descricao; }
-        //    set { descricao = value; }
-        //}
+        public Tipo Descricao
+        {
+            get { return descricao; }
+            set { descricao = value; }
+        }
 
         public int Preco
         {
-           set { preco = value; }
+            get { return preco; }
+            set { preco = value; }
         }
 
         public int Caucao
         {
+            get { return caucao; }
             set { caucao = value; }
         }
         #endregion
