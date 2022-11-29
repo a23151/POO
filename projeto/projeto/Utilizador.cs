@@ -24,7 +24,8 @@ namespace projeto
         public int Numero
         {
             get { return numero; }
-            set { numero = value; }  // Recebe e vai confirmar à BD IPCA se existe; Validar que não insere nºs negativos
+            set { if(value > 0) 
+                numero = value; }  // Recebe e vai confirmar à BD IPCA se existe; Validar que não insere nºs negativos
         }
         #endregion
 

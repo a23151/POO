@@ -11,8 +11,8 @@ namespace projeto
         #region Atributos
         int idMeio;
         //string descricao
-        Tipo modelo;
-        bool disponibilidade; //disponivel ou não
+        Modelo modelo;
+        public bool disponibilidade; //disponivel ou não  Faz sentido ser public?
         #endregion
 
         #region Construtores
@@ -24,8 +24,18 @@ namespace projeto
         #endregion
 
         #region Propriedades
+        public int IdMeio
+        {
+            get { return idMeio; }
+            set { idMeio = value; }
+        }
 
-        // ---> COMPLETAR <----
+        public Modelo Modelo
+        {
+            get { return modelo; }
+            set { modelo = value; }
+        }
+            
         #endregion
 
         #region OutrosMetodos
