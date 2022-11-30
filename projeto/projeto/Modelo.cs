@@ -19,7 +19,7 @@ namespace projeto
         //string designacao;
         Tipo descricao;
         int preco;
-        int caucao;
+        double caucao;          // a caução vai ser igual por modelo??
         #endregion
 
         #region Construtores
@@ -45,10 +45,11 @@ namespace projeto
             set { preco = value; }
         }
 
-        public int Caucao
+        public double Caucao
         {
             get { return caucao; }
-            set { caucao = value; }
+            set { if (value > 0) 
+                caucao = value; }
         }
         #endregion
 

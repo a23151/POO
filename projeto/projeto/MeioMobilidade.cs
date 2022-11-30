@@ -12,18 +12,19 @@ namespace projeto
         int idMeio;
         //string descricao
         Modelo modelo;
-        public bool disponibilidade; //disponivel ou não  Faz sentido ser public?
-        #endregion
+        bool disponibilidade; //disponivel ou não  (private pq é alterado qd é levantado/devolvido um pedido)
 
         #region Construtores
-        public MeioMobilidade(int idMeio)
+        public MeioMobilidade(int idMeio, Modelo modelo, bool disponibilidade)
         {
             this.idMeio = idMeio;
-            this.disponibilidade = true;
+            this.modelo = modelo;
+            this.disponibilidade = disponibilidade;
         }
         #endregion
 
         #region Propriedades
+       
         public int IdMeio
         {
             get { return idMeio; }
@@ -35,7 +36,12 @@ namespace projeto
             get { return modelo; }
             set { modelo = value; }
         }
-            
+
+        public bool Disponibilidade
+        {
+            get { return disponibilidade; }
+            set { disponibilidade = value; }  
+        }  
         #endregion
 
         #region OutrosMetodos
