@@ -10,24 +10,29 @@ namespace projeto
     enum Tipo
     {
         BICICLETA = 1,
-        BICIELETRICA =2,
-        TROTINETEELETRICA =3
+        BICIELETRICA =5,
+        TROTINETEELETRICA =10
     }
+    /// <summary>
+    /// Classe de modelo de veículo
+    /// </summary>
     internal class Modelo
     {
         #region Atributos
-        //string designacao;
         Tipo descricao;
-        int preco;
-        double caucao;          // a caução vai ser igual por modelo??
+        double preco;       // O preço vai ser especifico para cada meio. Como controlar?
         #endregion
 
         #region Construtores
-        public Modelo(Tipo desc, int preco, int caucao)
+        public Modelo( Tipo desc, int preco)
         {
             this.descricao = desc;
             this.preco = preco;
-            this.caucao = caucao; 
+        }
+
+        public Modelo(Tipo desc)
+        {
+            this.descricao = desc;
         }
         #endregion
 
@@ -39,21 +44,32 @@ namespace projeto
             set { descricao = value; }
         }
 
-        public int Preco
+        public double Preco 
         {
             get { return preco; }
             set { preco = value; }
         }
-
-        public double Caucao
-        {
-            get { return caucao; }
-            set { if (value > 0) 
-                caucao = value; }
-        }
         #endregion
 
         #region OutrosMetodos
-        #endregion
-    }
+
+        /// <summary>
+        /// Determina o preço/hora para cada modelo
+        /// </summary>
+        /// <returns></returns>
+        public double Valor()
+        {
+            double valor;
+
+            switch (descricao)
+            {
+                case Tipo.BICICLETA: valor = 0.5; break;
+                case Tipo.BICIELETRICA: valor = 1; break;
+                case Tipo.TROTINETEELETRICA: valor = 1; break;
+                default: valor = 0; break;
+            }
+            return (valor);
+        }
+            #endregion
+        }
 }

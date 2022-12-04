@@ -6,25 +6,27 @@ using System.Threading.Tasks;
 
 namespace projeto
 {
+    /// <summary>
+    /// Classe que define as caracteristicas de cada meio de mobilidade
+    /// </summary>
     internal class MeioMobilidade
     {
         #region Atributos
         int idMeio;
-        //string descricao
         Modelo modelo;
-        bool disponibilidade; //disponivel ou não  (private pq é alterado qd é levantado/devolvido um pedido)
+      //  bool disponibilidade; 
+        #endregion
 
         #region Construtores
-        public MeioMobilidade(int idMeio, Modelo modelo, bool disponibilidade)
+        public MeioMobilidade(int idMeio, Modelo modelo)
         {
             this.idMeio = idMeio;
             this.modelo = modelo;
-            this.disponibilidade = disponibilidade;
         }
         #endregion
 
         #region Propriedades
-       
+
         public int IdMeio
         {
             get { return idMeio; }
@@ -37,14 +39,50 @@ namespace projeto
             set { modelo = value; }
         }
 
-        public bool Disponibilidade
-        {
-            get { return disponibilidade; }
-            set { disponibilidade = value; }  
-        }  
+        //public bool Disponibilidade
+        //{
+        //    get { return disponibilidade; }
+        //    set { disponibilidade = value; }
+        //}
         #endregion
 
         #region OutrosMetodos
+        /// <summary>
+        /// Reescrita da função Equals. Dois meios de mobilidade são iguais se o ID é igual.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
+        public override bool Equals(object? obj)
+        {
+            if (!(obj is MeioMobilidade)) return false;
+
+            MeioMobilidade m = obj as MeioMobilidade;
+            return (this.IdMeio == m.IdMeio);
+        }
+
+        /// <summary>
+        /// Redefinição do operador == para Meios de Mobilidade
+        /// </summary>
+        /// <param name="m1"></param>
+        /// <param name="m2"></param>
+        /// <returns></returns>
+        public static bool operator ==(MeioMobilidade m1, MeioMobilidade m2)
+        {
+            return (m1.Equals(m2));
+
+        }
+
+        /// <summary>
+        /// Redefinição do operador != para Meios de Mobilidade
+        /// </summary>
+        /// <param name="m1"></param>
+        /// <param name="m2"></param>
+        /// <returns></returns>
+        public static bool operator !=(MeioMobilidade m1, MeioMobilidade m2)
+        {
+            return (!(m1==m2));
+        }
+
         #endregion
     }
 }

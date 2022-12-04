@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="projeto.MeioMobilidade">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgAAAgAAAAAAAAAAAAAAAAAgAAAAIAiA=</HashCode>
+      <FileName>MeioMobilidade.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projeto.MeiosMob">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAgAAAgAAAAAA=</HashCode>
+      <FileName>MeiosMob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projeto.Modelo">
+    <Position X="0.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAQAAAAAEAAAAAAQAAAAEAAAAAAA=</HashCode>
+      <FileName>Modelo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projeto.Pedido">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAACCEgAIAgAAAAAIAAIACAAKACAAAAAg=</HashCode>
+      <FileName>Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projeto.Pedidos">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAIAQQCAAAEAAAIAAAAAAA=</HashCode>
+      <FileName>Pedidos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projeto.TecnicoSAS">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAA=</HashCode>
+      <FileName>TecnicoSAS.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projeto.Utilizador">
+    <Position X="1.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQIAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAEAAAEBAAA=</HashCode>
+      <FileName>Utilizador.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="projeto.Tipo" Collapsed="true">
+    <Position X="0.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAQAAAAAAAAAABAA=</HashCode>
+      <FileName>Modelo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="projeto.Estado" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Pedido.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
