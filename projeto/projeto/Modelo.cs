@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * @author: Adriana Gomes a23151 | Joana Pereira a23153
+ * @email: a23151@alunos.ipca.pt | a23153@alunos.ipca.pt
+ * @ date: 04/12/2022
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +11,10 @@ using System.Threading.Tasks;
 
 namespace projeto
 {
-
+    [Serializable]
+    /// <summary>
+    /// Enumerador - Existem apenas três tipos de modelo 
+    /// </summary>
     enum Tipo
     {
         BICICLETA = 1,
@@ -16,6 +24,7 @@ namespace projeto
     /// <summary>
     /// Classe de modelo de veículo
     /// </summary>
+    [Serializable]
     internal class Modelo
     {
         #region Atributos
@@ -24,16 +33,16 @@ namespace projeto
         #endregion
 
         #region Construtores
-        public Modelo( Tipo desc, int preco)
+        public Modelo( Tipo desc)
         {
             this.descricao = desc;
-            this.preco = preco;
+            this.preco = Valor(); 
         }
 
-        public Modelo(Tipo desc)
-        {
-            this.descricao = desc;
-        }
+        //public Modelo(Tipo desc)
+        //{
+        //    this.descricao = desc;
+        //}
         #endregion
 
         #region Propriedades
@@ -54,7 +63,7 @@ namespace projeto
         #region OutrosMetodos
 
         /// <summary>
-        /// Determina o preço/hora para cada modelo
+        /// Devolve o preço/hora para cada modelo
         /// </summary>
         /// <returns></returns>
         public double Valor()
@@ -68,7 +77,7 @@ namespace projeto
                 case Tipo.TROTINETEELETRICA: valor = 1; break;
                 default: valor = 0; break;
             }
-            return (valor);
+            return valor;
         }
             #endregion
         }

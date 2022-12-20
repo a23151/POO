@@ -1,4 +1,9 @@
-﻿ using System;
+﻿/**
+ * @author: Adriana Gomes a23151 | Joana Pereira a23153
+ * @email: a23151@alunos.ipca.pt | a23153@alunos.ipca.pt
+ * @ date: 04/12/2022
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -7,11 +12,14 @@ using System.Threading.Tasks;
 
 namespace projeto
 {
+    [Serializable]
     enum Estado
     {
         ATIVO = 1,
         CANCELADO = 2
     }
+
+    [Serializable]
 
     /// <summary>
     /// Classe que define as caracteristicas de cada pedido
@@ -92,6 +100,7 @@ namespace projeto
             string nova = String.Format("Utilizador: {0}, : {1}, DataInicial: {2}, DataFinal: {3}, Valor: {4} euros, Estado: {5}\n", Utilizador.Numero, IdPedido, DataIni.ToShortDateString(), DataFim.ToShortDateString(), ValorPagamento(), EstadoPedido);
             return nova;
         }
+
         /// <summary>
         /// Equals override. Método que permite comparar dois pedidos. Os pedidos são considerados iguais se são feitos pelo mesmo utilizador, requerem o mesmo meio e iniciam na mesma data.
         /// </summary>
@@ -106,19 +115,27 @@ namespace projeto
             return (this.Meio == pedido.Meio && (DateTime.Equals(DataIni, pedido.DataIni) && this.Utilizador.Equals(pedido.Utilizador))); // uso do operador ==  definido em MeioMobilidade;
         }
      
-
         /// <summary>
         /// Calcula o valor do pedido
         /// </summary>
         /// <returns></returns>
         public double ValorPagamento()
         {
-            double valor = Meio.Modelo.Valor();
             TimeSpan t = dataFim.Subtract(dataIni);     
 
-            double valorTot = (t.TotalHours * valor);
+            double valorTot = (t.TotalHours * Meio.Modelo.Preco);
             
             return valorTot;
+        }
+
+        /// <summary>
+        /// Função que permite alterar o estado do pedido.
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="estado"></param>
+        public void AlteraEstado(Estado estado)
+        {
+                this.EstadoPedido = estado;
         }
 
         #endregion

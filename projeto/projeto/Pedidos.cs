@@ -1,7 +1,14 @@
-﻿using System;
+﻿/**
+ * @author: Adriana Gomes a23151 | Joana Pereira a23153
+ * @email: a23151@alunos.ipca.pt | a23153@alunos.ipca.pt
+ * @ date: 04/12/2022
+ **/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,7 +33,10 @@ namespace projeto
         #region Propriedades
         public List<Pedido> ListaPedidos
         {
-            get { return listaPedidos; }
+            get {
+                List<Pedido> copiaP = new List<Pedido>(listaPedidos); 
+                return copiaP; 
+            }
             set { listaPedidos = value; }
         }
 
@@ -49,7 +59,8 @@ namespace projeto
         }
 
         /// <summary>
-        /// Controla a ocupação dos meios de mobilidade. Verifica se o meio de mobilidade requisitado está disponível nas datas inseridas, por comparação com as datas de pedidos ativos já existentes na listaPedidos.
+        /// Controla a ocupação dos meios de mobilidade. Verifica se o meio de mobilidade requisitado está disponível nas datas inseridas,
+        /// por comparação com as datas de pedidos ativos já existentes na listaPedidos.
         /// </summary>
         /// <param name="p1"></param>
         /// <returns></returns>
@@ -107,23 +118,27 @@ namespace projeto
         }
 
         /// <summary>
-        /// Função que permite alterar o estado do pedido.
+        /// Permite consultar os seus pedidos.
         /// </summary>
-        /// <param name="p"></param>
-        /// <param name="estado"></param>
-        /// <returns></returns>
-        public void AlteraEstado(Pedido p, Estado estado)
+        /// <param name="listaP"></param>
+        public virtual void ConsultaPedidos(Utilizador a)
         {
-            if (listaPedidos.Contains(p))  
             {
-                p.EstadoPedido = estado;
+                foreach (Pedido p in listaPedidos)
+                {
+                    if (p.Utilizador.Equals(a))
+                    {
+                        Console.WriteLine(p);           // alterar para cosntruir uma estrutura que será retornada
+                    }
+                }
             }
+
         }
 
         /// <summary>
         /// Função que mostra os pedidos da listaPedidos. Utiliza o ToString reescrito na classe Pedido.
         /// </summary>
-        public void MostraPedidos()
+        public void MostraPedidos() //alterado para static
         {
             foreach (Pedido p in listaPedidos)
             {
@@ -133,6 +148,32 @@ namespace projeto
             }
 
         }
+
+        /// <summary>
+        /// Guarda num ficheiro informação dos pedidos
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
+        public bool GuardaFicheiro(string file)
+        {
+            //string file = @"C:\Temp\poo.bin";
+
+            try
+            {
+                Stream stream = File.Open(file, FileMode.OpenOrCreate);
+                BinaryFormatter bin = new BinaryFormatter();
+                bin.Serialize(stream, listaPedidos);
+                stream.Close();
+                return true;
+            }
+            catch (IOException e)
+            {
+                //Console.WriteLine(e.Message);
+                throw e;
+            }
+        }
+
+
         #endregion
     }
 }

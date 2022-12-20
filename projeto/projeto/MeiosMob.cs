@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * @author: Adriana Gomes a23151 | Joana Pereira a23153
+ * @email: a23151@alunos.ipca.pt | a23153@alunos.ipca.pt
+ * @ date: 04/12/2022
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace projeto
 {
+    [Serializable]
     /// <summary>
     /// Classe que permite guardar todos os meios de mobilidade criados
     /// </summary>
@@ -23,10 +29,12 @@ namespace projeto
         #endregion
 
         #region Propriedades
-                            // É assim??
         public List <MeioMobilidade> ListaMeios
         {
-            get { return listaMeios; }
+            get {
+                List<MeioMobilidade> copiaM = new List<MeioMobilidade>(listaMeios);
+                return copiaM; 
+            }
             set { listaMeios = value; }
         }
         #endregion

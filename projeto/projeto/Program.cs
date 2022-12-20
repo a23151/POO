@@ -1,4 +1,9 @@
-﻿namespace projeto
+﻿/**
+ * @author: Adriana Gomes a23151 | Joana Pereira a23153
+ * @email: a23151@alunos.ipca.pt | a23153@alunos.ipca.pt
+ * @ date: 04/12/2022
+ **/
+namespace projeto
 {
     internal class Program
     {
@@ -21,8 +26,8 @@
             Pedido p5 = new Pedido(5,mm1, u2, new DateTime(2022, 11, 5), new DateTime(2022, 11, 8)); //Adiciona
                                                                                                       //
 
-            //Pedido p4 = new Pedido(4, mm2, u1, new DateTime(2022, 11, 12), new DateTime(2022, 11, 14)); // Adiciona (Não devia!!!)
-            //Pedido p5 = new Pedido(5, mm1, u1, new DateTime(2022, 11, 12), new DateTime(2022, 11, 14)); // Não (utilizador já tem 1 pedido na mesma data)
+            //Pedido p4 = new Pedido(4, mm2, u1, new DateTime(2022, 11, 12), new DateTime(2022, 11, 14)); 
+            //Pedido p5 = new Pedido(5, mm1, u1, new DateTime(2022, 11, 12), new DateTime(2022, 11, 14));
 
             // Console.WriteLine(p1);
 
@@ -37,6 +42,8 @@
             //listaP.InserirPedido(p5);
 
             listaP.MostraPedidos();
+
+            //listaP.GuardaFicheiro("C:\\Temp\\poo.bin");
 
 
 

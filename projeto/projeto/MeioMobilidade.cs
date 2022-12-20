@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+ * @author: Adriana Gomes a23151 | Joana Pereira a23153
+ * @email: a23151@alunos.ipca.pt | a23153@alunos.ipca.pt
+ * @ date: 04/12/2022
+ **/
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +11,11 @@ using System.Threading.Tasks;
 
 namespace projeto
 {
+    [Serializable]
     /// <summary>
     /// Classe que define as caracteristicas de cada meio de mobilidade
     /// </summary>
+
     internal class MeioMobilidade
     {
         #region Atributos
@@ -61,7 +68,7 @@ namespace projeto
         }
 
         /// <summary>
-        /// Redefinição do operador == para Meios de Mobilidade
+        /// Redefinição do operador == para Meio de Mobilidade
         /// </summary>
         /// <param name="m1"></param>
         /// <param name="m2"></param>
@@ -73,7 +80,7 @@ namespace projeto
         }
 
         /// <summary>
-        /// Redefinição do operador != para Meios de Mobilidade
+        /// Redefinição do operador != para Meio de Mobilidade
         /// </summary>
         /// <param name="m1"></param>
         /// <param name="m2"></param>
