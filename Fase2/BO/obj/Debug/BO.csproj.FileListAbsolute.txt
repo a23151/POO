@@ -1,6 +1,0 @@
-C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\Fase2\Fase2\BL\obj\Debug\BO.csproj.AssemblyReference.cache
-C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\Fase2\Fase2\BL\obj\Debug\BO.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\Fase2\Fase2\BL\bin\Debug\BL.dll
-C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\Fase2\Fase2\BL\bin\Debug\BL.pdb
-C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\Fase2\Fase2\BL\obj\Debug\BL.dll
-C:\Users\ASUS\Desktop\IPCA\2ano\1semestre\POO\Projeto\Fase2\Fase2\BL\obj\Debug\BL.pdb
